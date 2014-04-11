@@ -45,8 +45,7 @@ class Notifier(object):
         self.nclient = nclient.Client(
             username=cfg.CONF.nova_admin_username,
             api_key=cfg.CONF.nova_admin_password,
-            project_id=None,
-            tenant_id=cfg.CONF.nova_admin_tenant_id,
+            project_id=cfg.CONF.nova_admin_tenant_id,
             auth_url=cfg.CONF.nova_admin_auth_url,
             bypass_url=bypass_url,
             region_name=cfg.CONF.nova_region_name,
